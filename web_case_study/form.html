@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0px;
+            padding: 0px;
+        }
+        body
+        {
+            /* border:1px solid black; */
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+        .name-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 0px; /* Adds spacing between fields */
+            background-color: #f0f8ff;
+            /* background-color: #AFDBF5; */
+        }
+        .name-group {
+            flex: 1;
+        }
+        .name-container label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .name-container input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            /* border-radius: 5px; */
+            box-sizing: border-box;
+        }
+        .address-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 0px; /* Adds spacing between fields */
+            background-color: #f0f8ff;
+        }
+        .address-group {
+            flex: 1;
+        }
+        .address-container label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .address-container input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            /* border-radius: 5px; */
+            box-sizing: border-box;
+        }
+        .contact-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 0px; /* Adds spacing between fields */
+            background-color: #f0f8ff;
+        }
+        .contact-group {
+            flex: 1;
+        }
+        .contact-container label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+        .contact-container input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            /* border-radius: 5px; */
+            box-sizing: border-box;
+        }
+        .preference-row
+        {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .checkbox-group {
+            width: calc(33.33% - 20px); /* Ensures 3 columns */
+            display: flex;
+            align-items: center;
+        }
+        .preference-container label {
+            margin-left: 8px;
+        }
+        #heading-label
+        {
+            margin-left: 0px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+            background-color: #f0f8ff;
+        }
+        .form-container {
+            display: flex;
+        }
+        .form-container p {
+            margin-right: 20px;
+            margin-top: 10px;
+        }
+        .form-container form {
+            margin-top: 7px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .form-container label {
+            margin: 5px 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            /* text-align: center; */
+            padding: 11px;
+        }
+        .main-heading
+        {
+            font-weight: bold;
+            font-size: medium;
+            background-color: #72A0C1;
+            padding: 5px;
+            /* background-color: #76ABDF; */
+        }
+        .work-table
+        {
+            margin-top: 15px;
+            padding: 5px 0px;
+        }
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #f0f8ff; /* Light blue background */
+            border-bottom: 1px solid #ccc;
+        }
+
+        .left-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container {
+            width: 100px; /* Adjust as needed */
+            height: 80px; /* Adjust as needed */
+            margin-right: 20px;
+        }
+
+        .logo-image {
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+        }
+
+        .right-section {
+            text-align: right;
+        }
+        .right-section span {
+            /* font-size: 1.5em; */
+            color: #333;
+            margin-right: 50px;
+            font-weight: bold;
+            font-size: x-large;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <div class="left-section">
+            <div class="logo-container">
+                <img src="formimage.jpg" alt="Child Care Center Logo" class="logo-image">
+            </div>
+            <div class="contact-info">
+                <p style="font-weight: bold;">&lt;Name of Child Care Center&gt;</p>
+                <p>&lt;Address&gt;</p>
+                <p>&lt;Address&gt;</p>
+                <p>&lt;Telephone Number&gt;</p>
+                <p>&lt;Website Address&gt;</p>
+            </div>
+        </div>
+        <div class="right-section">
+            <span style="margin-right: 110px;">Child Care </span><br>
+            <span>Employment Application</span>
+            <!-- <p>Employment Application</p> -->
+        </div>
+    </div>
+    <div class="main-heading">PERSONAL INFORMATION</div>
+    <section class="name-container" id="name">
+        <form>
+            <div class="name-row">
+                <div class="name-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" placeholder="Last Name">
+                </div>
+                <div class="name-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" placeholder="First Name">
+                </div>
+                <div class="name-group">
+                    <label for="middleName">Middle Name</label>
+                    <input type="text" id="middleName" placeholder="Middle Name">
+                </div>
+                <div class="name-group">
+                    <label for="middleName">Position Applying</label>
+                    <input type="text" id="position-applying" placeholder="Position Applyiny">
+                </div>
+            </div>
+        </form>
+    </section>
+    <section class="address-container" id="address">
+        <form>
+            <div class="address-row">
+                <div class="address-group">
+                    <label for="lastName">Complete Address</label>
+                    <input type="text" placeholder="Complete Address">
+                </div>
+            </div>
+        </form>
+    </section>
+    <section class="contact-container" id="contact-email">
+        <form>
+            <div class="contact-row">
+                <div class="contact-group">
+                    <label for="lastName">Primary Contact No.</label>
+                    <input type="number" id="lastName" placeholder="Primary Contact No.">
+                </div>
+                <div class="contact-group">
+                    <label for="firstName">Secondary Contact No.</label>
+                    <input type="number" id="firstName" placeholder="Secondary Contact No.">
+                </div>
+                <div class="contact-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="middleName" placeholder="Email Address">
+                </div>
+            </div>
+        </form>
+    </section>
+    <section class="preference-container" id="preference">
+        <form>
+            <label id="heading-label">If Classroom Position, Age Group Preferences (if any)</label>
+            <div class="preference-row">
+                <!-- First Row -->
+                 <!-- <p>If classroom position,Age group preferences(if any)</p> -->
+                <div class="checkbox-group">
+                    <input type="checkbox" id="group1" checked>
+                    <label for="group1">No Preference </label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="group2">
+                    <label for="group2">Infants / Toddlers</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="group3">
+                    <label for="group3">Two's / Three's</label>
+                </div>
+                <!-- Second Row -->
+                <div class="checkbox-group">
+                    <input type="checkbox" id="group4">
+                    <label for="group4">Pre-School</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="group5">
+                    <label for="group5">Multi-Age</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="group6">
+                    <label for="group6">School-Age</label>
+                </div>
+            </div>
+        </form>
+    </section>
+    <section class="preference-container" id="preference">
+        <form>
+            <label id="heading-label">Location Preferences(if any)</label>
+            <div class="preference-row">
+                <!-- First Row -->
+                 <!-- <p>If classroom position,Age group preferences(if any)</p> -->
+                <div class="checkbox-group">
+                    <input type="checkbox" id="group1" checked>
+                    <label for="group1">No Preference</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="group2">
+                    <label for="group2">Administration</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="group3">
+                    <label for="group3">Accounting</label>
+                </div>
+                <!-- Second Row -->
+                <div class="checkbox-group">
+                    <input type="checkbox" id="group4">
+                    <label for="group4">Maintenance</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="group5">
+                    <label for="group5">&lt;Branch 1&gt;</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="group6">
+                    <label for="group6">&lt;Branch 2&gt;</label>
+                </div>
+                <!-- Third Row -->
+                <div class="checkbox-group">
+                    <input type="checkbox" id="group4">
+                    <label for="group4">&lt;Branch 3&gt;</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="group5">
+                    <label for="group5">&lt;Branch 4&gt;</label>
+                </div>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="group6">
+                    <label for="group6">&lt;Branch 5&gt;</label>
+                </div>
+            </div>
+        </form>
+    </section>
+    <section class="form-container">
+        <p>Would you prefer:</p>
+        <form>
+            <label><input type="checkbox" name="work" value="full-time"> Full Time</label>
+            <label><input type="checkbox" name="work" value="part-time"> Part Time</label>
+            <label><input type="checkbox" name="work" value="no-pref" checked> No Pref If Part Time::</label>
+            <label><input type="checkbox" name="time" value="am"> AM</label>
+            <label><input type="checkbox" name="time" value="pm"> PM</label>
+        </form>
+    </section>
+    <section class="form-container">
+        <p>Have you ever filled an application with us before?</p>
+        <form>
+            <label><input type="checkbox" name="work" value="full-time"> Yes</label>
+            <label><input type="checkbox" name="work" value="part-time" checked> No</label>
+        </form>
+    </section>
+    If Yes,give date of application: <input class="dashed-input" type="text" placeholder="___________________________" />
+    <section class="form-container">
+        <p>Have you ever been employed with us before?</p>
+        <form>
+            <label><input type="checkbox" name="work" value="full-time"> Yes</label>
+            <label><input type="checkbox" name="work" value="part-time" checked> No</label>
+        </form>
+    </section>
+    On what date would you be available to start working:<input class="dashed-input" type="text" placeholder="___________________________" />
+    <section class="form-container">
+        <p>Have you ever been convicted of a crime other than a minor traffic incident</p>
+        <form>
+            <label><input type="checkbox" name="work" value="full-time"> Yes</label>
+            <label><input type="checkbox" name="work" value="part-time" checked> No</label>
+        </form>
+    </section>
+    <p>If yes,please explain:</p>
+    <p>Not applicable</p>
+    <table>
+        <div class="work-table" style="background-color: #72A0C1; font-weight: bold;
+            font-size: medium; padding: 5px;">WORK EXPERIENCE SIMILAR TO POSITION APPLYING FOR(Last 3 latest only)</div>
+        <tr style="background-color: #f0f8ff">
+            <th rowspan="2">Company</th>
+            <th colspan="2">Date (Year)</th>
+            <th rowspan="2">Reason for Leaving</th>
+        </tr>
+        <tr style="background-color: #f0f8ff;">
+            <th>From</th>
+            <th>To</th>
+        </tr>
+        <tr>
+            <td>&lt;Company Name&gt;</td>
+            <td>&lt;YYYY&gt;</td>
+            <td>&lt;YYYY&gt;</td>
+            <td>&lt;Reason for Leaving&gt;</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <table>
+        <div style="padding:  5px; background-color: #72A0C1; font-weight: bold;
+            font-size: medium;">EDUCATION(most recent)</div>
+        <!-- <tr>
+            <th colspan="4">Education(most recent)</th>
+        </tr> -->
+        <tr style="background-color: #f0f8ff;">
+            <th rowspan="2">Level</th>
+            <th rowspan="2">School</th>
+            <th colspan="2">Date (Year)</th>
+            <th rowspan="2">Degree</th>
+        </tr>
+        <tr style="background-color: #f0f8ff;">
+            <th>From</th>
+            <th>To</th>
+        </tr>
+        <tr>
+            <td>&lt;Level&gt;</td>
+            <td>&lt;School Name&gt;</td>
+            <td>&lt;YYYY&gt;</td>
+            <td>&lt;YYYY&gt;</td>
+            <td>&lt;Degree&gt;</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>
